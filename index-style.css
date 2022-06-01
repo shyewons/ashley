@@ -1,0 +1,630 @@
+* {
+    box-sizing: border-box;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+p, h1,h2,h3,h4,ul,ol,li,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+body, html {
+    margin: 0;
+    width: 100%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.center-wrap {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/* header */
+
+
+.logo-area {
+    width: 100%;
+    height: 65px;
+    line-height: 80px;
+    background: #0e212f;
+    text-align: center;
+}
+
+.logo-area a {
+    display: inline;
+}
+
+.menu-area {
+    background: #213e54;
+    width: 100%;
+    height: 50px;
+    line-height: 55px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.menu-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-wrap ul li {
+    float: left;
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 0px 13px;
+    transition: 0.2s;
+    letter-spacing: 0.4px;
+}
+
+.menu-wrap ul li:hover {
+    background: #0e212f;
+}
+
+.login-join a {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+    float: left;
+}
+
+
+/* section */
+
+
+.main-banner-area {
+    background: linear-gradient(to left,#fc6a42,#dd4a3a);
+    width: 100%;
+}
+
+.main-banner-area a {
+    text-align: center;
+    background: url(images/1647418019-2.jpg) no-repeat;
+    width: 1024px;
+    height: 507px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-banner-area a #cheeseLogo {
+    position: absolute;
+    transition: 0.5s;
+    animation-name: logoani;
+    animation-duration: 2s;
+    animation-iteration-count :infinite;
+    top: 10px;
+    right: 20px;
+    z-index: 99;
+}
+
+.main-banner-area a #cheeseLogo:hover {
+    transform: scale(1.1);
+}
+
+.main-banner-area a #cheeseLogo.main {
+    top: 10px;
+    right: 20px;
+}
+
+.main-banner-area a #cheeseLogo.sub {
+    top: 650px;
+    right:365px;
+}
+
+
+
+@keyframes logoani {
+    from {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 10px;
+
+    }
+
+    to {
+        margin-top: 0;
+
+    }
+}
+
+/* .sub-banner-area */
+
+.sub-banner-area {
+    margin-top: 15px;
+    background: #fec240;
+}
+
+.sub-banner-area #sub-banner {
+    width: 1024px;
+    height: 507px;
+}
+
+.sub-banner-area .sub-banner-box {
+    position: relative;
+    top: -500px;
+}
+
+.sub-banner-area .sub-banner-box a {
+    position: absolute;
+    display: block;
+    width: 500px;
+    height: 250px;
+}
+
+.sub-banner-area .sub-banner-box a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sub-banner-area .sub-banner-box a:nth-child(1) {
+    top: -10px;
+    left: 0;
+}
+
+.sub-banner-area .sub-banner-box a:nth-child(2) {
+    top: -10px;
+    right: 0;
+}
+
+.sub-banner-area .sub-banner-box a:nth-child(3) {
+    top: 245px;
+    left: 0;
+}
+
+.sub-banner-area .sub-banner-box a:nth-child(4) {
+    top: 245px;
+    right: 0;
+}
+
+
+.sub-banner-area .detail-img-wrap {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    transition: 0.3s;
+}   
+
+.sub-banner-area .detail-img-wrap #detail-closebtn {
+    color: #fff;
+    font-size: 25px;
+    text-align: right;
+    margin: 40px 400px 0 0 ;
+}
+
+.sub-banner-area .detail-img-wrap img {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sub-banner-area .clickhere {
+    position: absolute;
+    left: -150px;
+    top: 220px;
+    text-align: right;
+    font-size: 12pt;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+.event-notice-wrap {
+    margin: 20px auto;
+}
+
+.event-notice-wrap .center-wrap {
+    display: flex;
+}
+
+
+/* .event-area */
+
+.event-area {
+    padding-top: 50px;
+    overflow: hidden;
+    height: 430px;
+    width: 512px;
+    position: relative;
+}
+
+.event-area::after {
+    content: "";
+    height: 440px;
+    width: 1px;
+    background: #213e54;
+    display: block;
+    right: 0;
+    top: 30px;
+    position: absolute;
+}
+
+.event-area #event-title,
+.notice-area #notice-title {
+    text-align: center;
+    color: #0e212f;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.notice-area #notice-title {
+    margin-bottom: 17px;
+}
+
+.event-area .event-list-wrap {
+    width: 1500px;
+    transition: 0.2s;
+}
+
+.event-area .event-list {
+    float: left;
+    margin: 0 16px;
+    transition: 0.3s;
+}
+
+.event-area .event-list-wrap .event-list .event-img {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+
+.event-area .event-list-wrap .event-list #event-img-1 {
+    background: url(images/eventimg1.PNG) no-repeat;
+}
+
+.event-area .event-list-wrap .event-list #event-img-2 {
+    background: url(images/eventimg2.PNG) no-repeat;
+}
+
+.event-area .event-list-wrap .event-list #event-img-3 {
+    background: url(images/eventimg3.PNG) no-repeat;
+}
+
+.event-area .event-list-wrap .event-list #event-img-4 {
+    background: url(images/eventimg4.PNG) no-repeat;
+}
+
+.event-area .event-list-wrap .event-list #event-img-1,
+.event-area .event-list-wrap .event-list #event-img-2,
+.event-area .event-list-wrap .event-list #event-img-3,
+.event-area .event-list-wrap .event-list #event-img-4 {
+    background-size: 100%;
+    background-position: center;
+}
+
+.event-area .event-list-wrap .event-list #event-img-1:hover,
+.event-area .event-list-wrap .event-list #event-img-2:hover,
+.event-area .event-list-wrap .event-list #event-img-3:hover,
+.event-area .event-list-wrap .event-list #event-img-4:hover {
+    background-size: 105%;
+}
+
+.event-area .event-list p:nth-child(2) {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.event-area .event-list p:nth-child(3) {
+    font-size: 12px;
+}
+
+.event-notice-wrap .center-wrap .event-btn-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event-notice-wrap .center-wrap .event-btn-wrap .event-btn {
+    width: 15px;
+    height: 15px;
+    background: #ddd;
+    margin: 5px;
+    float: left;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+.event-notice-wrap .center-wrap .event-btn-wrap .event-btn.on,
+.event-notice-wrap .center-wrap .event-btn-wrap .event-btn:hover {
+    background: #0e212f;
+}
+
+
+/* .notice-area */
+
+.notice-area {
+    display: block;
+    width: 512px;
+    height: 430px;
+    padding-top: 50px;
+}
+
+.notice-list-wrap {
+    padding: 15px;
+}
+
+.notice-area #notice-more-btn {
+    float: right;
+    margin-top: -20px;
+    margin-right: 20px;
+    border: 3px solid grey;
+    height: 30px;
+    padding: 0px 7px;
+    border-radius: 30px;
+    color: grey;
+}
+
+.notice-list-wrap li {
+    width: 480px;
+    height: 60px;
+    line-height: 65px;
+    padding: 0 15px 0 20px ;
+    border-bottom: 1px solid #213e54;
+}
+
+.notice-list-wrap li a {
+    display: flex;
+}
+
+.notice-list-wrap li:nth-child(1) {
+    border-top: 1px solid #213e54;
+}
+
+.notice-list-wrap li a span:nth-child(1) {
+    width: 430px;
+}
+
+.notice-list-wrap li:hover a {
+    font-weight: 600;
+}
+
+
+/* home-service-area */
+
+.home-service-area {
+    margin-top: 50px;
+}
+
+.home-service-area .center-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-service-area .center-wrap .background-img {
+    background: url(images/home-back1.png) no-repeat;
+    display: block;
+    width: 1500px;
+    height: 350px;
+    position: absolute;
+    z-index: -10;
+    transition: 0.3s;
+}
+
+.home-service-area .home-service-title {
+    width: 1024px;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    margin: 30px auto;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.home-service-area .text-wrap {
+    width: 1400px;
+}
+
+.home-service-area .delivery-area,
+.home-service-area .homestaurant-area {
+    height: 350px;
+    width: 670px;
+    padding-top: 80px;
+    display: block;
+    float: left;
+    transition: 0.3s;
+}
+
+.home-service-area .delivery-area {
+    padding-left: 250px;
+}
+
+.home-service-area .character {
+    display: block;
+    position: absolute;
+    transition: 0.3s;
+    height: 300px;
+}
+
+.ramzzi-img {
+    background: url(images/character.png);
+    top: 30px;
+    left: -60px;
+    width: 268px;
+}
+
+.berribit-img {
+    background: url(images/character2.png) no-repeat;
+    top: 20px;
+    right: -70px;
+    width: 187px;
+}
+
+.home-service-area .sub-title {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 45px;
+}
+
+.home-service-area .delivery-area .delivery-title {
+    margin-left: 145px;
+}
+
+.home-service-area .homestaurant-area .homestaurant-title {
+    padding-left: 25px;
+    transition: 0.3s;
+}
+
+.home-service-area .delivery-info-wrap a,
+.home-service-area .homestaurant-info-wrap a {
+    height: 110px;
+    width: 110px;
+    font-size: 18px;
+    color: #fff;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 17px;
+    text-align: center;
+    margin: 0 15px;
+}
+
+.home-service-area .delivery-info-wrap a i,
+.home-service-area .homestaurant-info-wrap a i {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.home-service-area .delivery-info-wrap a:hover {
+    font-size: 20px;
+}
+
+.home-service-area .homestaurant-info-wrap a:hover {
+    font-size: 20px;
+    padding: 10px;
+    padding-top: 16px;
+}
+
+.home-service-area .delivery-info-wrap a:hover i,
+.home-service-area .homestaurant-info-wrap a:hover i {
+    font-size: 47px;
+}
+
+.home-service-area .homestaurant-area .homestaurant-info-wrap {
+    opacity: 0;
+    transition: 0.3s;
+    margin-left: 70px;
+}
+
+.home-service-area .homestaurant-area:hover .homestaurant-title {
+    padding-left: 150px;
+}
+
+.home-service-area .homestaurant-area:hover .homestaurant-info-wrap {
+    opacity: 1;
+    margin-left: 55px;
+}
+
+
+/* footer */
+
+footer {
+    height: 200px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px;
+    border-top: 2px solid #0e212f;
+    font-size: 14px;
+}
+
+footer .center-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .info-wrap {
+    line-height: 40px;
+}
+
+footer .info-wrap a {
+    display: inline;
+}
+
+footer .footer-right {
+    text-align: right;
+}
+
+footer .footer-right > img {
+    margin: 0 15px;
+}
+
+footer .footer-right .sns-area a {
+    width: 50px;
+    float: left;
+    font-size: 40px;
+    margin: 5px;
+}
+
+footer .family-site:before {
+    content: "";
+    clear: both;
+}
+
+footer .family-site {
+    clear: both;
+    border: 1px solid #000;
+    width: 130px;
+    user-select: none;
+    position: relative;
+}
+
+footer .footer-right .family-site dt {
+    padding: 5px 15px;
+}
+
+footer .family-site dd {
+    border-top: 1px solid #000;
+    width: 100%;
+    padding: 5px 15px;
+}
+
+footer .family-site dd:hover {
+    background: #213e54;
+    color: #fff;
+}
+
+footer .family-site .site-wrap {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #000;
+    top: -137px;
+    background: #fff;
+    display: none;
+}
+
+footer .family-site .site-wrap.up {
+    display: block;
+}
+
+
